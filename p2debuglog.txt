@@ -1,1 +1,46 @@
+Reading symbols from a.out...
+(gdb) b main
+Breakpoint 2 at 0x1375: file main.c, line 56.
+(gdb) r
+Starting program: /home/a.out 
 
+Breakpoint 2, main () at main.c:56
+56      {
+(gdb) n
+58          f1=input_fraction();
+(gdb) n
+enter num,den 
+ 5
+5
+59          f2=input_fraction();
+(gdb) n
+enter num,den 
+ 6
+5
+60          f3=input_fraction();
+(gdb) n
+enter num,den 
+ 7
+8
+61          largest=Largest_fraction(f1,f2,f3);
+(gdb) n
+
+Breakpoint 1, Largest_fraction (f1=..., f2=..., f3=...) at main.c:27
+27          if(f1num>f2num && f1num>f3num)
+(gdb) n
+31          else if(f2num>f3num)
+(gdb) n
+33              return f2;
+(gdb) n
+39      }
+(gdb) n
+main () at main.c:62
+62          output(f1,f2,f3,largest);
+(gdb) n
+63          return 0;
+(gdb) n
+64      }
+(gdb) c
+Continuing.
+the largest fraction among 5/5 , 6/5 and 7/8 is 6/5[Inferior 1 (process 411) exited normally]
+(gdb)

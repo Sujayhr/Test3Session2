@@ -1,1 +1,24 @@
+Reading symbols from a.out...
+(gdb) b main
+Breakpoint 1 at 0x1262: file main.c, line 27.
+(gdb) r
+Starting program: /home/a.out 
 
+Breakpoint 1, main () at main.c:27
+27      {
+(gdb) n
+29        input (&a,&b,&c,&d);
+(gdb) n
+enter two fractions:2 2
+2
+2
+30        add (a,b,c,d,&x,&y);
+(gdb) n
+31        output (a,b,c,d,x,y);
+(gdb) n
+32        return 0;
+(gdb) n
+33      }
+(gdb) c
+Continuing.
+the sum of two fractions is 8/4[Inferior 1 (process 1376) exited normally]
